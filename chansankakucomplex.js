@@ -18,6 +18,7 @@ var tittle = document.title.replace(/[/\\?%*:|"<>]/g, '-');
 
 var throttle_interval_ms = 1000;
 var last_throttle_time_ms = 0;
+
 function throttle(fn) {
 	var epoch_ms = (new Date).getTime();
 	var time_to_sleep_ms = Math.max(0, (last_throttle_time_ms + throttle_interval_ms) - epoch_ms);
